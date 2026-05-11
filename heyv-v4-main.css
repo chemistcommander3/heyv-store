@@ -1,0 +1,115 @@
+/* CALIBRI MAIN FONT */
+:root {
+    --bg: #000000;
+    --text: #ffffff;
+    --card: #0a0a0a;
+    --glass: rgba(0,0,0,0.8);
+}
+
+[data-theme="light"] {
+    --bg: #ffffff;
+    --text: #000000;
+    --card: #f4f4f4;
+    --glass: rgba(255,255,255,0.8);
+}
+
+body {
+    font-family: 'Calibri', 'Candara', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+.glass-header {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(128,128,128,0.2);
+}
+
+.sidebar-bg { background-color: var(--bg); }
+.footer-bg { background-color: var(--card); }
+
+/* PRODUCT CARDS */
+.item-card {
+    position: relative;
+    background: var(--card);
+    overflow: hidden;
+    border: 1px solid rgba(128,128,128,0.1);
+    height: 100%;
+}
+
+.item-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.item-card:hover img {
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+
+.item-info {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.order-btn {
+    position: absolute;
+    bottom: 80px;
+    left: 10%;
+    width: 80%;
+    padding: 15px;
+    background: var(--text);
+    color: var(--bg);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s;
+    z-index: 50;
+}
+
+.item-card:hover .order-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CATEGORY CARDS */
+.category-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--card);
+}
+
+.category-card img {
+    transition: transform 1.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+.category-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+    transition: background 0.5s;
+}
+
+.category-card:hover .category-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%);
+}
+
+/* HERO ANIMATION */
+@keyframes zoom { from { transform: scale(1); } to { transform: scale(1.1); } }
+.hero-zoom { animation: zoom 20s infinite alternate linear; }
+
+/* SMOOTH SCROLLING */
+html { scroll-behavior: smooth; }

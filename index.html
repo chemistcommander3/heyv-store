@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEYV | Men's Performance Luxury</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- NEW FILENAME TO FORCE BROWSER REFRESH -->
+    <link rel="stylesheet" href="heyv-v4-main.css">
+</head>
+<body class="transition-colors duration-500">
+
+    <!-- SIDE NAVIGATION -->
+    <div id="sideMenu" class="fixed top-0 right-[-100%] w-full md:w-[450px] h-full z-[100] p-12 border-l border-gray-800 sidebar-bg transition-all duration-700">
+        <button onclick="h_toggleMenu()" class="text-5xl mb-12">&times;</button>
+        <nav class="flex flex-col gap-8 uppercase tracking-[0.4em] text-xl">
+            <a href="javascript:void(0)" onclick="h_nav('home')" class="hover:pl-4 transition-all">Home</a>
+            <a href="javascript:void(0)" onclick="h_nav('adult')" class="hover:pl-4 transition-all">Young Adult</a>
+            <a href="javascript:void(0)" onclick="h_nav('kids')" class="hover:pl-4 transition-all">Children</a>
+            <a href="javascript:void(0)" onclick="h_nav('watches')" class="hover:pl-4 transition-all">Watches</a>
+            <a href="javascript:void(0)" onclick="h_nav('fragrance')" class="hover:pl-4 transition-all">Fragrance</a>
+            <a href="javascript:void(0)" onclick="h_nav('acc')" class="hover:pl-4 transition-all">Socks & Hats</a>
+        </nav>
+    </div>
+
+    <!-- MODERN HEADER -->
+    <header class="fixed w-full z-50 glass-header p-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-black tracking-tighter cursor-pointer" onclick="h_nav('home')">HEYV</h1>
+            
+            <div class="flex items-center gap-8">
+                <!-- DARK/LIGHT MODE TOGGLE -->
+                <button onclick="h_toggleMode()" class="text-xl hover:scale-110 transition">
+                    <i id="modeIcon" class="fas fa-moon"></i>
+                </button>
+                <button onclick="h_toggleMenu()" class="text-2xl p-2"><i class="fas fa-bars-staggered"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CINEMATIC HERO (MEN'S) -->
+    <section id="hero-main" class="h-screen relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <img src="assets/hero.png" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-20 text-center" data-aos="zoom-out" data-aos-duration="1500">
+            <h2 class="text-6xl md:text-[12rem] font-bold italic tracking-tighter leading-none mb-4">HEYV</h2>
+            <p class="tracking-[0.8em] text-sm md:text-xl uppercase mb-10">Elite Performance Gear</p>
+            <button onclick="document.getElementById('home-categories').scrollIntoView({behavior:'smooth'})" class="border-2 border-white px-12 py-4 uppercase font-bold tracking-widest hover:bg-white hover:text-black transition">Explore Shop</button>
+        </div>
+    </section>
+
+    <!-- CONTENT AREA -->
+    <main class="container mx-auto py-20 px-6 min-h-screen">
+        
+        <!-- HOME CATEGORIES GRID (Visible on Home) -->
+        <div id="home-categories" class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 mb-20">
+            <div onclick="h_nav('adult')" class="category-card h-[200px] md:h-[450px] group" data-aos="fade-up">
+                <img src="assets/adult.png" class="w-full h-full object-cover">
+                <div class="category-overlay absolute inset-0 flex flex-col justify-end p-4 md:p-10">
+                    <h3 class="text-lg md:text-4xl font-black tracking-tight md:tracking-[0.1em] uppercase">Adult</h3>
+                    <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-widest text-xs md:text-sm mt-2">Explore Shop</p>
+                </div>
+            </div>
+            <div onclick="h_nav('kids')" class="category-card h-[200px] md:h-[450px] group" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/kids.png" class="w-full h-full object-cover">
+                <div class="category-overlay absolute inset-0 flex flex-col justify-end p-4 md:p-10">
+                    <h3 class="text-lg md:text-4xl font-black tracking-tight md:tracking-[0.1em] uppercase">Kids</h3>
+                    <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-widest text-xs md:text-sm mt-2">Elite Styles</p>
+                </div>
+            </div>
+            <div onclick="h_nav('watches')" class="category-card h-[200px] md:h-[450px] group" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/watches.png" class="w-full h-full object-cover">
+                <div class="category-overlay absolute inset-0 flex flex-col justify-end p-4 md:p-10">
+                    <h3 class="text-lg md:text-4xl font-black tracking-tight md:tracking-[0.1em] uppercase">Watches</h3>
+                    <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-widest text-xs md:text-sm mt-2">Precision</p>
+                </div>
+            </div>
+            <div onclick="h_nav('fragrance')" class="category-card h-[200px] md:h-[450px] group" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/fragrance.png" class="w-full h-full object-cover">
+                <div class="category-overlay absolute inset-0 flex flex-col justify-end p-4 md:p-10">
+                    <h3 class="text-lg md:text-4xl font-black tracking-tight md:tracking-[0.1em] uppercase">Scent</h3>
+                    <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-widest text-xs md:text-sm mt-2">Luxury Fragrance</p>
+                </div>
+            </div>
+            <div onclick="h_nav('acc')" class="category-card h-[200px] md:h-[450px] group" data-aos="fade-up" data-aos-delay="400">
+                <img src="assets/acc.png" class="w-full h-full object-cover">
+                <div class="category-overlay absolute inset-0 flex flex-col justify-end p-4 md:p-10">
+                    <h3 class="text-lg md:text-4xl font-black tracking-tight md:tracking-[0.1em] uppercase">Access</h3>
+                    <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-widest text-xs md:text-sm mt-2">Hats & More</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="cat-header" class="hidden mb-16" data-aos="fade-right">
+            <h2 id="cat-title" class="text-5xl uppercase font-bold tracking-widest border-l-8 border-current pl-6">Category</h2>
+        </div>
+
+        <div id="shop-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Products injected by JS -->
+        </div>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer-bg pt-24 pb-12 border-t border-gray-800 px-8 mt-20">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div>
+                <h4 class="text-2xl font-black mb-6 uppercase">HEYV STORE</h4>
+                <p class="opacity-60 mb-6">High-performance apparel and luxury scents tailored for the modern man.</p>
+                <div class="flex gap-6 text-2xl">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest">Support</h4>
+                <p>Zakho, Iraq</p>
+                <p class="text-xl font-bold mt-2">+964 750 201 5912</p>
+                <p class="mt-4 opacity-60 italic">Pay on Delivery Available</p>
+            </div>
+            <div class="h-64 rounded-xl overflow-hidden border border-gray-700 grayscale hover:grayscale-0 transition-all duration-700">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102434.331201115!2d42.61793739726562!3d37.13511110000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4008447d7c675317%3A0x6b72a6b252069f5e!2sZakho!5e0!3m2!1sen!2siq!4v1700000000000!5m2!1sen!2siq" width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="heyv-v4-logic.js"></script>
+</body>
+</html>
