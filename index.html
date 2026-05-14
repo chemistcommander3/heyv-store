@@ -14,7 +14,7 @@
     <!-- MODERN HEADER -->
     <header class="fixed w-full z-50 glass-header p-5 transition-all">
         <div class="container mx-auto flex justify-between items-center">
-            <img src="logo.jpg" alt="HEYV Logo" class="w-12 h-12 rounded-full object-cover cursor-pointer" onclick="window.scrollTo(0,0)">
+            <img src="logo.jpeg" alt="HEYV Logo" class="w-12 h-12 rounded-full object-cover cursor-pointer" onclick="window.scrollTo(0,0)">
             
             <div class="flex items-center gap-4 md:gap-8">
                 <!-- LANGUAGE PICKER -->
@@ -38,16 +38,16 @@
     <section id="hero-main" class="h-screen relative flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-black/50 z-10"></div>
         <video src="video header.mp4" class="absolute inset-0 w-full h-full object-cover pointer-events-none" autoplay loop muted playsinline></video>
-        <div class="relative z-20 text-center px-4" data-aos="zoom-out" data-aos-duration="1500">
+        <div class="relative z-20 text-center px-4 text-white" data-aos="zoom-out" data-aos-duration="1500">
             <h2 id="hero-title" class="text-6xl md:text-[10rem] font-bold italic tracking-tighter leading-none mb-4">HEYV</h2>
             <p id="hero-subtitle" class="tracking-[0.4em] text-sm md:text-xl uppercase mb-10">Premium Skincare & Beauty Essentials</p>
-            <button id="hero-btn" onclick="document.getElementById('shop-section').scrollIntoView({behavior:'smooth'})" class="border-2 border-white px-12 py-4 uppercase font-bold tracking-widest hover:bg-white hover:text-black transition">Explore Collection</button>
+            <button id="hero-btn" onclick="document.getElementById('shop-section').scrollIntoView({behavior:'smooth'})" class="border-2 border-white px-12 py-4 uppercase font-bold tracking-widest hover:bg-white hover:text-black transition text-white">Explore Collection</button>
         </div>
     </section>
 
     <!-- CONTENT AREA -->
-    <main id="shop-section" class="container mx-auto py-24 px-4 md:px-8 min-h-screen">
-        <div id="shop-list" class="flex flex-col gap-24 md:gap-32 max-w-6xl mx-auto">
+    <main id="shop-section" class="container mx-auto py-16 px-4 md:px-8 min-h-screen">
+        <div id="shop-list" class="flex flex-col gap-12 md:gap-20 max-w-5xl mx-auto">
             <!-- Products injected by JS -->
         </div>
     </main>
@@ -57,7 +57,7 @@
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
                 <div class="flex items-center gap-4 mb-6">
-                    <img src="logo.jpg" alt="HEYV Logo" class="w-12 h-12 rounded-full object-cover shadow-lg">
+                    <img src="logo.jpeg" alt="HEYV Logo" class="w-12 h-12 rounded-full object-cover shadow-lg">
                     <h4 id="footer-store-title" class="text-2xl font-black uppercase m-0">HEYV STORE</h4>
                 </div>
                 <p id="footer-store-desc" class="opacity-60 mb-6">Premium skincare and luxury fragrances carefully curated for you.</p>

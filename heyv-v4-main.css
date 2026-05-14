@@ -33,7 +33,7 @@ body {
 .product-card {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
@@ -41,7 +41,7 @@ body {
     .product-card {
         flex-direction: row;
         align-items: center;
-        gap: 4rem;
+        gap: 2.5rem;
     }
     .product-card:nth-child(even) {
         flex-direction: row-reverse;
@@ -50,12 +50,18 @@ body {
 
 .product-image-wrapper {
     width: 100%;
-    max-width: 450px;
+    max-width: 260px;
     aspect-ratio: 1/1;
     border-radius: 1rem;
     overflow: hidden;
     flex-shrink: 0;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768px) {
+    .product-image-wrapper {
+        max-width: 320px;
+    }
 }
 
 .product-image-wrapper img {
