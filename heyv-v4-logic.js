@@ -167,16 +167,21 @@ function renderProducts() {
                     <img src="${p.img}" alt="${pData.name}">
                 </div>
                 <div class="product-info ${rtlClass}">
-                    <h3 class="text-3xl md:text-5xl font-black mb-4">${pData.name}</h3>
-                    <p class="text-xl md:text-2xl font-bold mb-6 text-yellow-600 dark:text-yellow-400">${p.price}</p>
-                    <p class="text-lg md:text-xl opacity-80 mb-10 leading-relaxed max-w-2xl">${pData.desc}</p>
-                    <button onclick="h_send('${pData.name}', '${p.price}')" class="buy-btn border-2 border-current px-8 py-4 uppercase font-bold tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">
+                    <h3 class="text-2xl md:text-5xl font-black mb-2 md:mb-4">${pData.name}</h3>
+                    <p class="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-yellow-600 dark:text-yellow-400">${p.price}</p>
+                    <p class="text-base md:text-xl opacity-80 mb-6 md:mb-10 leading-relaxed max-w-2xl">${pData.desc}</p>
+                    <button onclick="h_send('${pData.name}', '${p.price}')" class="buy-btn border-2 border-current px-6 py-3 md:px-8 md:py-4 text-sm md:text-base uppercase font-bold tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">
                         ${t.orderBtn}
                     </button>
                 </div>
             </div>
         `;
     }).join('');
+    
+    // Refresh animations for newly added elements
+    setTimeout(() => {
+        AOS.refresh();
+    }, 100);
 }
 
 function h_send(n, p) {
